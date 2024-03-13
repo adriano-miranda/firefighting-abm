@@ -53,7 +53,9 @@ class ForestFire(Model):
             density,
             temperature,
             truck_strategy,
+            river_exists,
             river_width,
+            river_position,
             break_width,
             random_fires,
             num_firetruck,
@@ -71,8 +73,10 @@ class ForestFire(Model):
         self.width = width
         self.density = density
 
+        self.river_exists = river_exists
         self.river_length = width
         self.river_width = river_width
+        self.river_position = river_position
 
         self.break_length = width
         self.break_width = break_width
@@ -171,12 +175,16 @@ class ForestFire(Model):
         '''
         Creating a river
         '''
-        if self.river_width == 0:
+        if self.river_width == 0 | self.river_exists == False:
             pass
         else:
             # initiating the river off-grid
             x = -1
-            y_init = random.randrange(self.height - 1)
+            #y_init = random.randrange(self.height - 1)
+            #altura del río (pixeles desde la parte de arriba a arriba)
+            y_init = self.river_position
+            print("Altura del rio: ", y_init)
+            
 
             # increasing the length of the river
             for i in range(int(self.river_length)):

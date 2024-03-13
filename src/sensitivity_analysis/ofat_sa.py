@@ -12,12 +12,12 @@ import sys
 sys.path.append('../')
 import pandas as pd
 import os
-from mesa.batchrunner import BatchRunnerMP
+#from mesa.batchrunner import BatchRunnerMP
 import numpy as np
 from forestfiremodel_sa import ForestFire
 import matplotlib.pyplot as plt
 import time
-'''
+
 begin = time.time()
 
 
@@ -133,7 +133,7 @@ print("Variance of the number of extinguished trees: ", data["truck_strategy"]["
 
 print("Mean of the number of burned trees: ", data["truck_strategy"]["On Fire"].mean())
 print("Variance of the number of burned trees: ", data["truck_strategy"]["On Fire"].var())
-'''
+
 # To plot histogram
 directory = os.chdir("data/")
 file_name = ["truckstrategy_0_ofat_truck_strategy___repli_1000__dist_samp_1.csv",

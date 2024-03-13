@@ -81,7 +81,11 @@ model_parameters = {
     'text_environment': StaticText("Environment Generation Settings"),
     'density': Slider ("Tree density", 0.6, 0.01, 1.0, 0.01),
     'sparse_ratio': Slider("Ratio of sparse vegetations", 0.5, 0, 1.0, 0.1),
+    'text_River': StaticText("River Settings"),
+    'river_exists': Checkbox("River", value=False),
     'river_width': Slider("River width", 0, 0, 10, 1),
+    'river_position': Slider("River position", 0, 0, 100, 1),
+    #'PRUEBA': StaticText("PRUEBA"),
     'break_width': Slider("Firebreak width", 0, 0, 6, 1),
     # Creating sliders for agents settings of the model
     'text_agents': StaticText( "Agents Settings"),
